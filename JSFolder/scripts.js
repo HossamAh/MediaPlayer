@@ -3,8 +3,8 @@ async function getQuranData() {
     let output = NaN;
     let err = false;
     try {
-        // "http://api.alquran.cloud/v1/quran/ar.alafasy"
-        output = await fetch("http://api.alquran.cloud/v1/surah");
+        // "https://api.alquran.cloud/v1/quran/ar.alafasy"
+        output = await fetch("https://api.alquran.cloud/v1/surah");
         output=await output.json();
     }catch(reason)
     {
@@ -39,7 +39,7 @@ let getSurah = async (surahNumber) => {
     let err=false;
     try {
         //get the surah source then display it in preview section.
-        currentSurah = await fetch(`http://api.alquran.cloud/v1/surah/${surahNumber + 1}`);
+        currentSurah = await fetch(`https://api.alquran.cloud/v1/surah/${surahNumber + 1}`);
         currentSurah=await currentSurah.json();
         console.log(currentSurah);
         if(currentSurah.status!=="OK")
